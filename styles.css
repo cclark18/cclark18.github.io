@@ -1,0 +1,12 @@
+body
+{
+    background-color: #768DA6;
+}
+.main {
+    float: center;
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    background-color: #FCFCFD;
+    border-radius: 20px;
+}
