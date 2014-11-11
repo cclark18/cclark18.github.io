@@ -9,4 +9,9 @@ body
     padding-bottom: 5px;
     background-color: #FCFCFD;
     border-radius: 20px;
+    font-family: Helvetica, Arial, Sans-serif;
+}
+
+.niceButton {
+    
 }

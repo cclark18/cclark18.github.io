@@ -8,23 +8,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <link rel="stylesheet" type="text/css" href="http://cclark18.github.io/styles.css"/>
+
+    <style type="text/css">
+        #blueCircle {
+            background-color: #041C38;
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+        }
+
+        .niceButton {
+            background-color: #041C38;
+        }
+    </style>
+
+    
 </head>
 
 <body>
 <div class="main">
-    <h1>Learning Javascript</h1>
+    <button id="textChanger">Click Me!</button>
 
-    <p id="text">Here are words</p>
+    <div id="firstDiv">This is some text</div>
 
-    <button id="myButton">Click Me!</button>
+    <button id="textAppender">Append some text</button>
+
+    <div id="secondDiv">Javascript is...</div>
+
+    <button id="textCreator">Create Text</button>
+
+    <div id="emptyDiv"></div>
+
+    <div id="blueCircle"></div>
+
+    <input id="myInput" type="text"></input>
+
+    <button id="stylesChanger">Change the text!</button>
+
+    <div id="editDiv">Words!</div>
 
 </div>
 
-    <script type="text/javascript">
-		document.getElementById("myButton").onclick=function() {
-			alert('hi');
-		}
-	</script>
+<script type="text/javascript">
+window.onload=function() {
+    document.getElementById("textChanger").onclick=function() {
+        document.getElementById("firstDiv").innerHTML="text changed";
+    };
+    document.getElementById("textAppender").onclick=function() {
+        document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + " great!";
+    };
+    document.getElementById("textCreator").onclick=function() {
+        document.getElementById("emptyDiv").innerHTML="<ul><li>Cat</li><li>dog</li><li>mouse</li></ul>";
+    };
+    var magic = document.getElementById("blueCircle");
+    //magic.style.cursor = "pointer";
+    magic.onclick = function(){
+        this.style.display="none";
+    };
+
+    var newText = document.getElementById("myInput").value;
+
+    document.getElementById("stylesChanger").onclick=function(){
+        newText = document.getElementById("myInput").value;
+        document.getElementById("editDiv").innerHTML=newText;
+    }
+}
+</script>
 
 </body>
 </html>
