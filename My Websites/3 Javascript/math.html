@@ -7,7 +7,6 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="http://cclark18.github.io/favicon.gif"/>
-    
     <link rel="stylesheet" type="text/css" href="http://cclark18.github.io/styles.css"/>
 
     
@@ -58,8 +57,8 @@
     	var pascalTriangle = document.getElementById("pascalTriangle");
 
     	pascalCalculate.onclick=function() {
-    		var n = pascalN.value;
-    		var k = pascalK.value;
+    		var n = +pascalN.value;
+    		var k = +pascalK.value;
     		var val = pascalCalculateFunc(n, k);
     		console.log(pascalN.value + " " + pascalK.value);
     		console.log(val);
@@ -68,7 +67,7 @@
     	};
 
     	pascalGenerate.onclick=function() {
-    		var n = pascalTriN.value;
+    		var n = +pascalTriN.value;
 
     		pascalGenerateFunc(n, pascalTriangle);
     	}
@@ -85,6 +84,8 @@
     			}
     		}
 
+            console.log(results);
+
     		return pascalCalculateFuncRecursive(n, k, results);
     	}
 
@@ -99,14 +100,14 @@
     			return 0;
     		}
     		else {
-    			/*if(results[n - 1][k - 1] == -1) {
+    			if(results[n - 1][k - 1] == -1) {
     				results[n - 1][k - 1] = pascalCalculateFuncRecursive(n - 1, k - 1, results);
     			}
     			if(results[n - 1][k] == -1) {
     				results[n - 1][k] = pascalCalculateFuncRecursive(n - 1, k, results);
     			}
-    			return results[n - 1][k - 1] + results[n - 1][k];*/
-    			return pascalCalculateFuncRecursive(n-1, k-1, results) + pascalCalculateFuncRecursive(n-1, k, results);
+    			return results[n - 1][k - 1] + results[n - 1][k];
+    			//return pascalCalculateFuncRecursive(n-1, k-1, results) + pascalCalculateFuncRecursive(n-1, k, results);
     		}
     	}
 
