@@ -30,3 +30,10 @@ body
     font-family: Helvetica, Arial, Sans-serif;
     font-size: 100%;
 }
+
+.toolSection {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 3px;
+}

@@ -14,34 +14,71 @@
 
 <body>
 <div class="main">
-    <h1>Pascal's Triangle Generator</h1>
+    <h1>Math Utilities</h1>
 
-    <h2>C(N,K)</h2>
+    <!-- Pascal's Triangle Tools -->
+    <div id="pascalSection" class="toolSection">
+        <h2>Pascal's Triangle Generator</h2>
 
-    <div class="niceText">N: 
-    	<input id="pascalN" class="niceInput niceText"></input>
+        <h3>C(N,K)</h3>
+
+        <div class="niceText">N: 
+    	   <input id="pascalN" class="niceInput niceText"></input>
+        </div>
+        <br />
+
+        <div class="niceText">K: 
+    	   <input id="pascalK" class="niceInput niceText"></input>
+        </div>
+        <br />
+
+        <div id="pascalResult" class="niceText"></div>
+
+        <button id="pascalCalculate" class="niceButton">Calculate</button>
+
+        <h3>Pascal's Triangle with N rows</h3>
+
+        <div class="niceText">N: 
+    	   <input id="pascalTriN" class="niceInput niceText"></input>
+        </div>
+        <br />
+
+        <button id="pascalGenerate" class="niceButton">Generate</button>
+
+        <div id="pascalTriangle" class="niceText"></div>
     </div>
-    <br />
 
-    <div class="niceText">K: 
-    	<input id="pascalK" class="niceInput niceText"></input>
+    <!-- T-Number Triangle Tools -->
+    <div id="tNumberSection" class="toolSection">
+        <h2>T-Number Triangle Generator</h2>
+
+        <h3>T(N,K)</h3>
+
+        <div class="niceText">N: 
+           <input id="tNumberN" class="niceInput niceText"></input>
+        </div>
+        <br />
+
+        <div class="niceText">K: 
+           <input id="tNumberK" class="niceInput niceText"></input>
+        </div>
+        <br />
+
+        <div id="tNumberResult" class="niceText"></div>
+
+        <button id="tNumberCalculate" class="niceButton">Calculate</button>
+
+        <h3>T-Number Triangle with N rows</h3>
+
+        <div class="niceText">N: 
+           <input id="tNumberTriN" class="niceInput niceText"></input>
+        </div>
+        <br />
+
+        <button id="tNumberGenerate" class="niceButton">Generate</button>
+
+        <div id="tNumberTriangle" class="niceText"></div>
     </div>
-    <br />
-
-    <div id="pascalResult" class="niceText"></div>
-
-    <button id="pascalCalculate" class="niceButton">Calculate</button>
-
-    <h2>Pascal's Triangle with N rows</h2>
-
-    <div class="niceText">N: 
-    	<input id="pascalTriN" class="niceInput niceText"></input>
-    </div>
-    <br />
-
-    <button id="pascalGenerate" class="niceButton">Generate</button>
-
-    <div id="pascalTriangle" class="niceText"></div>
 </div>
 
 <script type="text/javascript">
