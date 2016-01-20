@@ -1,0 +1,240 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hear No Evil, See No Evil</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    background: white;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica;
+    }
+
+    img {
+    display: block;
+    }
+
+    em {
+    font-size: 12px;
+    }
+
+    #signature {
+    text-align: right;
+
+    font-style: oblique;
+    }
+
+    a:link,
+    a:visited {
+    color: #165788;
+    text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+    text-decoration: underline;
+    }
+
+    .wrapper {
+    width: auto;
+    margin: auto;
+    }
+
+    .container {
+    width: auto;
+    margin: auto;
+    }
+
+    #content {
+    width: 1000px;
+    margin: auto;
+    }
+    
+    #content ul {
+    margin-left: 30px;
+    }
+
+    #content article {
+    margin-bottom: 150px;
+    }
+
+    #content h1,
+    #content h2 {
+    color: black;
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-size: 48px;
+    }
+
+    #content h3 {
+    color: black;
+    border-bottom: 1px solid black;
+    text-align: right;
+    margin: 30px 0px 5px 0px;
+    font-size: 28px;
+    font-weight: 200;
+    }
+
+    #content p {
+    width: 100%;
+    line-height: 150%;
+    margin-bottom: 20px;
+    }
+
+    #content p:first-child {
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 2px;
+    }
+
+    pre {
+    font-size: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #ddd;
+    }
+    </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section id="content">
+      <h1>Hear No Evil, See No Evil</h1>
+	  <p><i>A 3rd person film noir stealth game.</i></p>
+      <h3>Chris Clark | Eric Thorndyke | Johnathan Baird | Kevin Le | Lana Hodzic</h3>
+      <article>
+
+	<h3>Details</h3>
+
+
+	<center>
+	  <img width="1024" height="576" src="images/img4.png"/>
+	  <em>First room of Hear No Evil, See No Evil</em>
+	 </center>
+     <br>
+
+	<h4></h4>
+	<p>Hear no Evil, See No Evil is visually and thematically styled after film noir from the 1940s. The protagonist is a rough--from 
+	the streets detective with a heart of gold, searching for clues to solve his toughest case yet; the disappearance of his ex-wife's brother, 
+	Marvin, has lead our hero into the depths of danger. Following the trail of clues so far, our hero has found his way into an abandoned warehouse
+	swarming with members of the notorious BlockTillo family. He now has to use all of his street smarts to solve the case and get out alive.</p>
+	<p></p>
+
+	<h4>Game Controls</h4>
+	<ul style = "list-style-type: circle">
+	  <li>W - Move forward</li>
+	  <li>S - Move backward</li>
+	  <li>A - Strafe left</li>
+	  <li>D - Strafe right</li>
+	  <li>Q - Lean left</li>
+	  <li>E - Lean right</li>
+	  <li>I - Zoom in</li>
+	  <li>O - Zoom out</li>
+	  <li>Up Arrow - Increase mouse sensitivity</li>
+	  <li>Down Arrow - Decrease mouse sensitivity</li>
+	  <li>ESC - Close window</li>
+	  <li>Shift - Sprint</li>
+	  <li>Control - Toggle crouch</li>  
+	  <li>Shift + H - Skip intro scene</li>
+	  <li>Shift + B - Toggle bounding boxes and ray casts</li>
+	  <li>Shift + N - Toggle debug camera</li>
+	</ul>
+	
+	<h3>Gameplay</h3>
+	<p>The goal of the game is to collect magnifying glasses (ingame clues and story elements), ultimately leading to the final crime scene at 
+	the end of the level. The player must avoid being detected by guards placed throughout the level. Guards can detect the player by casting rays 
+	to the points of the player's bounding box; if the guard detects the player then the player's detection level rises. When the detection 
+	level reaches 50%, guards will lock their vision on the player until the player seeks cover. The detection level is 
+	visually represented through a greyscaling effect and a detection meter (bar at the top of the screen). The speed at which the detection level 
+	rises is based on nearby lights and proximity to guards. The player must use in-game objects to  avoid detection, some of which are 
+	pushable using the sprint mechanic. </p>
+	<iframe width="1024" height="576"
+	src="http://www.youtube.com/embed/gKod5JOLifA?autoplay=0">
+	</iframe>
+    <br>
+    <br>
+    <center>
+      <img width="1024" height="576" src="images/img3.png"/>
+      <em>Clue checkpoint</em>
+     </center>
+     <br>
+    <center>
+      <img width="1024" height="576" src="images/img5.png"/>
+      <em>Detected by a guard</em>
+     </center>
+     <br>
+    <center>
+      <img width="1024" height="576" src="images/img7.png"/>
+      <em>Ending scene</em>
+     </center>
+     <br>
+
+	<h3>Technologies</h3>
+	<ul style = "list-style-type: circle">
+		<li>3rd person camera with collision detection and free movement</li>
+		<li>Rigid body character motion</li>
+		<li>3D uniform spatial datastructure (x, y, z spatial queries)</li>
+		<li>Shadow maps</li>
+		<li>View frustum culling based on approximate view + simplified occlusion culling for guard detection</li>
+		<li>Deferred shading</li>
+        <center>
+            <img width="512" height="288" src="images/color-map.png"/>
+            <em>Color Map</em>
+        </center>
+        <br>
+        <center>
+            <img width="512" height="288" src="images/position-map.png"/>
+            <em>Position Map</em>
+        </center>
+        <br>
+        <center>
+            <img width="512" height="288" src="images/normal-map.png"/>
+            <em>Normal Map</em>
+        </center>
+        <br>
+        <center>
+            <img width="512" height="288" src="images/final-shading.png"/>
+            <em>Final Shading</em>
+        </center>
+        <br>
+	</ul>
+
+	<h3>3rd Party Libraries</h3>
+	<ul style = "list-style-type: circle">
+		<li>GLFW 3.0</li>
+		<li>GLAD</li>
+		<li>OpenGL 2.1</li>
+		<li>irrKlang</li>
+		<li>ImGui</li>
+	</ul>
+
+	<h3>References</h3>
+	<ul style = "list-style-type: circle">
+		<li>"Real-time rendering" Tomas Akenine-Moller and Eric Hanes</li>
+		<li><a href="http://content.gpwiki.org/index.php/D3DBook:(Lighting)_Cook-Torrance">Cook torrance</a></li>
+		<li><a href="http://www.opengl-tutorial.org/intermediate-tutorials/tutorial-16-shadow-mapping/">Shadow maps</a></li>
+		<li><a href="http://www.codinglabs.net/tutorial_simple_def_rendering.aspx">Deferred shading</a></li>
+		<li><a href="http://ogldev.atspace.co.uk/www/tutorial35/tutorial35.html">Deferred shading</a></li>
+        <li><a href="http://gamasutra.com/blogs/EricUndersander/20131001/201382/Accurate_Collision_Zoom_for_Cameras.php">Accurate Collision Zoom for Cameras</a></li>
+		<li><a href="https://www.youtube.com/watch?v=EyaARFZQDuc">Red Sky at Night - David Gilmour</li>
+	</ul>
+
+	<h3>Thanks for reading!</h3>
+	<p id="signature">Hear No Evil, See No Evil</p>
+	</article>
+      </section>
+    </div>
+</body>
+</html>
